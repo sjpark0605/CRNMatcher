@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-def cleanCRNs(excel_df: pd.DataFrame):
+def cleanCRNs(excel_df: pd.DataFrame) -> pd.DataFrame:
     crnList = []
 
     for index, row in excel_df.iterrows():
