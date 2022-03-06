@@ -14,9 +14,6 @@ def cleanCRNs(excel_df: pd.DataFrame):
 excel1 = cleanCRNs(pd.read_excel('./assets/input1.xlsx'))
 excel2 = cleanCRNs(pd.read_excel('./assets/input2.xlsx'))
 
-print(excel1)
-print(excel2)
-
 nameList = []
 addressList = []
 
