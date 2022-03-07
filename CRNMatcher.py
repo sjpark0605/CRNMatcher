@@ -24,10 +24,10 @@ for crn in excel1["사업자등록번호"]:
         nameList.append("일치하는 사업자 없음")
         addressList.append("일치하는 사업자 없음")
     else:
-        nameList.append(targetRow.iloc[0]["대표자명"].strip())
-        addressList.append(targetRow.iloc[0]["주소"].strip())
+        nameList.append(targetRow.iloc[0]["대표자이름"].strip())
+        addressList.append(targetRow.iloc[0]["대표자주소"].strip())
 
-excel1.insert(len(excel1.columns), "대표자명", nameList, True)
-excel1.insert(len(excel1.columns), "주소", addressList, True)
+excel1.insert(len(excel1.columns), "대표자이름", nameList, True)
+excel1.insert(len(excel1.columns), "대표자주소", addressList, True)
 
 excel1.to_excel('./assets/output.xlsx')
