@@ -25,12 +25,12 @@ def matchCRN(path1, path2, outputDir):
             nameList.append("일치하는 사업자 없음")
             addressList.append("일치하는 사업자 없음")
         else:
-            nameList.append(targetRow.iloc[0]["대표자이름"].strip())
+            nameList.append(targetRow.iloc[0]["대표자명"].strip())
             targetAddress = ((str) (targetRow.iloc[0]["대표자주소"])).strip()
             targetPostcode = ((str) (targetRow.iloc[0]["대표자우편번호"])).strip()
 
             if targetAddress == "nan" or targetPostcode == "null":
-                addressList.append((str) (targetRow.iloc[0]["소재지주소"]).strip())
+                addressList.append((str) (targetRow.iloc[0]["소재지"]).strip())
                 postcodeList.append("확인필요")
             else:
                 while (len(targetPostcode) < 5):
@@ -39,7 +39,7 @@ def matchCRN(path1, path2, outputDir):
                 addressList.append(targetAddress)
                 postcodeList.append(targetPostcode)
 
-    excel1.insert(len(excel1.columns), "대표자이름", nameList, True)
+    excel1.insert(len(excel1.columns), "대표자명", nameList, True)
     excel1.insert(len(excel1.columns), "대표자주소", addressList, True)
     excel1.insert(len(excel1.columns), "대표자우편번호", postcodeList, True)
 
