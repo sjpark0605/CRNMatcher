@@ -8,7 +8,7 @@ class GUI:
         self.root = Tk()
         self.root.title("테스트 프로그램")
         self.root.resizable(False, False)
-        self.root.geometry("800x110")
+        self.root.geometry("600x110")
         self.pathMap = {}
 
     def run(self):
