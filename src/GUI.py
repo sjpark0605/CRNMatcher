@@ -13,7 +13,7 @@ class GUI:
 
     def run(self):
         self.addField("사업자 정보 엑셀", 0, 0)
-        self.addField("통신판매업 엑셀", 0, 1)
+        self.addField("통판 현황 엑셀", 0, 1)
         self.addField("저장할 폴더", 1, 2)
         self.addProcessButton()
         self.root.mainloop()
@@ -27,7 +27,7 @@ class GUI:
     def mergeExcelFiles(self):
         try:
             excel1 = self.readPath("사업자 정보 엑셀")
-            excel2 = self.readPath("통신판매업 엑셀")
+            excel2 = self.readPath("통판 현황 엑셀")
             outputDir = self.readPath("저장할 폴더")
 
             matchCRN(excel1, excel2, outputDir)
